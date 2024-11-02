@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAYANG ❤️❤️❤️</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-pink-100 flex items-center justify-center min-h-screen">
+
+    <div class="container bg-white p-8 rounded-lg shadow-lg text-center w-full max-w-xs transform transition duration-500 hover:scale-105">
+      <h1 class="text-2xl font-bold text-pink-600 mb-4 animate-bounce">How's Your Mood Today? 🌸</h1>
+  
+      <div class="mood-selector mb-6">
+        <label for="mood" class="block text-lg text-gray-700 font-semibold mb-2">Select Your Mood:</label>
+        <select id="mood" class="w-full p-2 border border-pink-300 rounded-lg text-gray-600" onchange="showAskButton()">
+          <option value="">Choose...</option>
+          <option value="happy">😊 Happy</option>
+          <option value="loving">❤️ Loving</option>
+          <option value="relaxed">😌 Relaxed</option>
+          <option value="tired">😴 Tired</option>
+          <option value="excited">😄 Excited</option>
+        </select>
+        <button onclick="displayMessage()" class="mt-4 w-full py-2 bg-pink-500 text-white rounded-lg shadow-md hover:bg-pink-400 transition transform hover:-translate-y-1 duration-300">Submit</button>
+      </div>
+  
+      <div id="message" class="message text-lg font-semibold text-pink-600 mt-4 hidden"></div>
+      
+      <!-- New Ask Button -->
+      <button id="askButton" class="mt-4 w-full py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-400 transition transform hover:-translate-y-1 duration-300 hidden" onclick="redirectToAsk()">Can I Ask?</button>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
